@@ -1,6 +1,5 @@
 console.log("page_token: "); console.log(process.env.page_token);
 console.log("verify_token: "); console.log(process.env.verify_token);
-console.log("port: "); console.log(process.env.port);
 console.log("PORT: "); console.log(process.env.PORT);
 
 if (!process.env.page_token) {
@@ -23,7 +22,7 @@ var controller = botkit.facebookbot({
 
 var bot = controller.spawn({ });
 
-controller.setupWebserver(process.env.port || 3000, function (err, webserver) {
+controller.setupWebserver(process.env.PORT || 3000, function (err, webserver) {
   controller.createWebhookEndpoints(webserver, bot, function () {
     console.log('ONLINE');
   });
