@@ -1,5 +1,7 @@
-console.log("Environment variables:");
-console.log(process.env);
+console.log("page_token: "); console.log(process.env.page_token);
+console.log("verify_token: "); console.log(process.env.verify_token);
+console.log("port: "); console.log(process.env.port);
+console.log("PORT: "); console.log(process.env.PORT);
 
 if (!process.env.page_token) {
   console.log('Error: Specify page_token in environment');
