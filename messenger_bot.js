@@ -1,3 +1,6 @@
+console.log("Environment variables:");
+console.log(process.env);
+
 if (!process.env.page_token) {
   console.log('Error: Specify page_token in environment');
   process.exit(1);

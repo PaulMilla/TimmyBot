@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./messenger_bot.js"
+    "start": "node messenger_bot.js"
   },
   "dependencies": {
     "botkit": "0.1.1"
