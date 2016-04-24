@@ -1,6 +1,6 @@
-console.log("page_token: "); console.log(process.env.page_token);
-console.log("verify_token: "); console.log(process.env.verify_token);
-console.log("PORT: "); console.log(process.env.PORT);
+console.log("page_token: " + process.env.page_token);
+console.log("verify_token: " + process.env.verify_token);
+console.log("PORT: " + process.env.PORT);
 
 if (!process.env.page_token) {
   console.log('Error: Specify page_token in environment');
@@ -30,32 +30,32 @@ controller.setupWebserver(process.env.PORT || 3000, function (err, webserver) {
 
 controller.on('tick', function () { /* Do nothing */ });
 
-controller.on('facebook_postback', function(bot, message) {
+controller.on('facebook_postback', function (bot, message) {
   console.log('facebook_postback: '); console.log(message);
   bot.reply(message, 'TIMMY!');
 });
 
-controller.on('message_received', function(bot, message) {
+controller.on('message_received', function (bot, message) {
   console.log('message_received: '); console.log(message);
   bot.reply(message, 'TIMMY!');
 });
 
-controller.on('message_deliveries', function(bot, message) {
+controller.on('message_deliveries', function (bot, message) {
   console.log('message_deliveries: '); console.log(message);
   bot.reply(message, 'TIMMY!');
 });
 
-controller.on('messages', function(bot, message) {
+controller.on('messages', function (bot, message) {
   console.log('messages: '); console.log(message);
   bot.reply(message, 'TIMMY!');
 });
 
-controller.on('messaging_optins', function(bot, message) {
+controller.on('messaging_optins', function (bot, message) {
   console.log('messaging_optins: '); console.log(message);
   bot.reply(message, 'TIMMY!');
 });
 
-controller.on('messaging_postbacks', function(bot, message) {
+controller.on('messaging_postbacks', function (bot, message) {
   console.log('messaging_postbacks: '); console.log(message);
   bot.reply(message, 'TIMMY!');
 });
